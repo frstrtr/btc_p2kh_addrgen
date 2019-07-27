@@ -1,6 +1,9 @@
 # btc_p2kh_addrgen
 Bitcoin p2kh address priv/pub key pair generator
 
+Wallet import format description:
+https://en.bitcoin.it/wiki/Wallet_import_format
+
 Generate your own private key (5 lines of python)
 pip install base58 / ecdsa
 tested in python 3.6.5
