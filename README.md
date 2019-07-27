@@ -2,15 +2,15 @@
 Bitcoin p2kh address priv/pub key pair generator
 
 Generate your own private key (5 lines of python)
-//# pip install base58 / ecdsa
-//# tested in python 3.6.5
+pip install base58 / ecdsa
+tested in python 3.6.5
 
-  // import os, binascii, hashlib, base58
-  // fullkey = "80"+ binascii.hexlify(os.urandom(32)).decode()
-  // sha256a = hashlib.sha256(binascii.unhexlify(fullkey)).hexdigest()
-  // sha256b = hashlib.sha256(binascii.unhexlify(sha256a)).hexdigest()
-  // WIF = base58.b58encode(binascii.unhexlify(fullkey+sha256b[:8]))
-  // print(WIF)
+   import os, binascii, hashlib, base58
+   fullkey = "80"+ binascii.hexlify(os.urandom(32)).decode()
+   sha256a = hashlib.sha256(binascii.unhexlify(fullkey)).hexdigest()
+   sha256b = hashlib.sha256(binascii.unhexlify(sha256a)).hexdigest()
+   WIF = base58.b58encode(binascii.unhexlify(fullkey+sha256b[:8]))
+   print(WIF)
 
 A few lines of python... perhaps useful for the paranoid.
 E.g. - easy to run this on disconnected bootable thumb drive.
