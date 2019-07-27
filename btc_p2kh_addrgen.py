@@ -6,8 +6,11 @@ def ripemd160(x):
     d = hashlib.new('ripemd160')
     d.update(x)
     return d
+
+#ask user for number of key pairs
+count = input('Number of pairs:')
     
-for n in range(1):   # number of key pairs to generate`
+for n in range(int(count)):   # number of key pairs to generate`
 
     # generate private key , uncompressed WIF starts with "5"
     priv_key = os.urandom(32)
@@ -25,8 +28,13 @@ for n in range(1):   # number of key pairs to generate`
     checksum = hashlib.sha256(hashlib.sha256(publ_addr_a).digest()).digest()[:4]
     publ_addr_b = base58.b58encode(publ_addr_a + checksum)
     i = n + 1
+    # empty line to divide output
+    print("")
+    # print full key
     print('Fullkey        ', str(i) + ":" + fullkey)
+    # print private key (WIF)
     print('Private Key    ', str(i) + ": " + WIF.decode())
+    # print Bitcoin Address (Public key)
     print("Bitcoin Address", str(i) + ": " + publ_addr_b.decode())
 
 print("Good Luck!!!")
