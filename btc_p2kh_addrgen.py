@@ -25,6 +25,7 @@ for n in range(1):   # number of key pairs to generate`
     checksum = hashlib.sha256(hashlib.sha256(publ_addr_a).digest()).digest()[:4]
     publ_addr_b = base58.b58encode(publ_addr_a + checksum)
     i = n + 1
+    print('Fullkey        ', str(i) + ":" + fullkey)
     print('Private Key    ', str(i) + ": " + WIF.decode())
     print("Bitcoin Address", str(i) + ": " + publ_addr_b.decode())
 
