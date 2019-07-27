@@ -1,5 +1,5 @@
 # pip install base58 / ecdsa
-# tested in python 3.6.5
+# tested in python 3.7.3
 
 import os, binascii, hashlib, base58, ecdsa
 def ripemd160(x):
